@@ -1,6 +1,6 @@
 function generatePassword() {
 	var url = "https://raw.githubusercontent.com/yanorestes/emoji-pwd/master/emoji.json";
-	var request = new XMLHTTPRequest();
+	var request = new XMLHttpRequest();
 	request.open('GET', url, true);
 	request.onreadystatechange = function() {
 		if (request.readyState == 4) {
@@ -8,11 +8,12 @@ function generatePassword() {
 				var emojis = JSON.parse(request.responseText);
 				var password = "";
 				for (i=1; i<=27; i++) {
-					var randomEmoji = emojis[Math.floor(Math.random()*items.length)];
-					password += randomEmoji;
+					var randomEmoji = emojis[Math.floor(Math.random()*emojis.length)];
+					password += randomEmoji['emoji'];
 				}
 				console.log(password);
 			}
 		}
 	}
+	request.send();
 }
