@@ -1,5 +1,5 @@
 function generatePassword() {
-	var url = ""
+	var url = "https://raw.githubusercontent.com/yanorestes/emoji-pwd/master/emoji.json"
 	var request = new XMLHTTPRequest();
 	request.open('GET', url, true);
 	request.onreadystatechange = function() {
