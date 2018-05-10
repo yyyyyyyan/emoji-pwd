@@ -11,7 +11,8 @@ function generatePassword() {
 					var randomEmoji = emojis[Math.floor(Math.random()*emojis.length)];
 					password += randomEmoji['emoji'];
 				}
-				console.log(password);
+				passwordOut = document.getElementById("pwd-out");
+				passwordOut.textContent = password;
 			}
 		}
 	}
