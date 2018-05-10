@@ -11,10 +11,18 @@ function generatePassword() {
 					var randomEmoji = emojis[Math.floor(Math.random()*emojis.length)];
 					password += randomEmoji['emoji'];
 				}
-				passwordOut = document.getElementById("pwd-out");
+				var passwordOut = document.getElementById("pwd-out");
 				passwordOut.textContent = password;
+				passwordOut.select();
+				document.execCommand("Copy");
 			}
 		}
 	}
 	request.send();
+}
+
+function copyPassword() {
+	var passwordOut = document.getElementById("pwd-out");
+	passwordOut.select();
+	document.execCommand("Copy");
 }
