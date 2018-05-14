@@ -29,7 +29,7 @@ function copyPassword() {
 	document.execCommand("Copy");
 }
 
-genBtn = document.getElementById('generate-btn');
+var genBtn = document.getElementById('generate-btn');
 genBtn.addEventListener('click', generatePassword);
-copyBtn = document.getElementById('copy-btn');
-copy-btn.addEventListener('click', copyPassword);
+var copyBtn = document.getElementById('copy-btn');
+copyBtn.addEventListener('click', copyPassword);
