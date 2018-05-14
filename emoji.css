@@ -3,7 +3,6 @@
 }
 
 button {
-	background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -13,6 +12,10 @@ button {
     font-size: 16px;
 }
 
-textarea {
-	display: none;
+#copy-btn {
+	background-color: #4C77AF; /* Blue */
+}
+
+#generate-btn {
+	background-color: #4CAF50; /* Green */
 }

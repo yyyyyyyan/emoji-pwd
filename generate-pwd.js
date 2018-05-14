@@ -13,8 +13,6 @@ function generatePassword() {
 				}
 				var passwordOut = document.getElementById("pwd-out");
 				passwordOut.textContent = password;
-				var passwordCopy = document.getElementById("pwd-copy");
-				passwordCopy.value = password;
 			}
 		}
 	}
@@ -22,7 +20,16 @@ function generatePassword() {
 }
 
 function copyPassword() {
-	var passwordCopy = document.getElementById("pwd-copy");
-	passwordCopy.select();
+	var passwordOut = document.getElementById("pwd-out");
+	var range = document.createRange();
+	range.selectNodeContents(passwordOut);
+	var selection = window.getSelection();
+	selection.removeAllRanges();
+	selection.addRange(range);
 	document.execCommand("Copy");
 }
+
+genBtn = document.getElementById('generate-btn');
+genBtn.addEventListener('click', generatePassword);
+copyBtn = document.getElementById('copy-btn');
+copy-btn.addEventListener('click', copyPassword);
