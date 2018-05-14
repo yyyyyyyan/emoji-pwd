@@ -13,8 +13,8 @@ function generatePassword() {
 				}
 				var passwordOut = document.getElementById("pwd-out");
 				passwordOut.textContent = password;
-				passwordOut.select();
-				document.execCommand("Copy");
+				var passwordCopy = document.getElementById("pwd-copy");
+				passwordCopy.value = password;
 			}
 		}
 	}
@@ -22,7 +22,7 @@ function generatePassword() {
 }
 
 function copyPassword() {
-	var passwordOut = document.getElementById("pwd-out");
+	var passwordCopy = document.getElementById("pwd-copy");
 	passwordOut.select();
 	document.execCommand("Copy");
 }
