@@ -23,6 +23,6 @@ function generatePassword() {
 
 function copyPassword() {
 	var passwordCopy = document.getElementById("pwd-copy");
-	passwordOut.select();
+	passwordCopy.select();
 	document.execCommand("Copy");
 }
